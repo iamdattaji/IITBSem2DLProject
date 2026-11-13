@@ -8,7 +8,7 @@ class TextAndMetricTests(unittest.TestCase):
     def test_normalization_and_ctc_decode(self) -> None:
         vocabulary = Vocabulary()
         self.assertEqual(normalize_text("Hello, WORLD!"), "hello world")
-        encoded = vocabulary.encode("leter")
+        encoded = vocabulary.encode("letter")
         self.assertEqual(
             vocabulary.decode(
                 [*encoded[:3], vocabulary.blank_id, *encoded[3:]]
